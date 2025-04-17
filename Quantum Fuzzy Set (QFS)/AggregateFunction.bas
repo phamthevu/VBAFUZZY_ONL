@@ -92,3 +92,48 @@ hec = Round((a - b) ^ (1 / 2), 5)
 QFSAGGW = "(" & ucc & "ej2p" & uec & "; " & vcc & "ej2p" & vec & "; " & hcc & "ej2p" & hec & ")"
 End Function
 
+Function SUMQFSC(x As Range, c As Integer) As Double
+Dim i As Integer, j As Integer, k As Integer
+k = WorksheetFunction.Max(x.Rows.Count, x.Columns.Count)
+
+If c = 1 Then
+    For i = 1 To k
+    If x(i) <> 0 Then SUMQFSC = SUMQFSC + QFSUC(x(i))
+    Next i
+End If
+
+If c = 2 Then
+    For i = 1 To k
+    If x(i) <> 0 Then SUMQFSC = SUMQFSC + QFSVC(x(i))
+    Next i
+End If
+
+If c = 3 Then
+    For i = 1 To k
+    If x(i) <> 0 Then SUMQFSC = SUMQFSC + QFSHC(x(i))
+    Next i
+End If
+End Function
+
+Function SUMQFSE(x As Range, c As Integer) As Double
+Dim i As Integer, j As Integer, k As Integer
+k = WorksheetFunction.Max(x.Rows.Count, x.Columns.Count)
+
+If c = 1 Then
+    For i = 1 To k
+    If x(i) <> 0 Then SUMQFSE = SUMQFSE + QFSUE(x(i))
+    Next i
+End If
+
+If c = 2 Then
+    For i = 1 To k
+    If x(i) <> 0 Then SUMQFSE = SUMQFSE + QFSVE(x(i))
+    Next i
+End If
+
+If c = 3 Then
+    For i = 1 To k
+    If x(i) <> 0 Then SUMQFSE = SUMQFSE + QFSHE(x(i))
+    Next i
+End If
+End Function
