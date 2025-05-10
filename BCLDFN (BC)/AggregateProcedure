@@ -33,5 +33,7 @@ For i = 1 To 10
         End If
         If Cells(1, 1) = 0 Then Cells(i + 4, j + 1) = 0
         Next j
+        
 Next i
 End Sub
+
