@@ -68,5 +68,5 @@ A1 = GET_A(s1)
 B1 = GET_B(s1)
 Y1 = GET_Y(s1)
 
-SPFDEF = ((2 * A1 - Y1) ^ 2) - ((B1 - Y1) ^ 2)
+SPFDEF = ((A1 - Y1) ^ 2) - ((B1 - Y1) ^ 2)
 End Function
